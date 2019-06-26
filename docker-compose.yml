@@ -5,12 +5,12 @@ version: '3.7'
 # docker service
 services:
 
-  # service for website
-  www:
+  # service for php and apache
+  php:
     build:
       context: ./php
       dockerfile: Dockerfile # enter the file path
-    container_name: php73
+    container_name: php73-apache
     depends_on:
       - db
     volumes:
@@ -34,6 +34,7 @@ services:
 
   # service for database management
   adminer:
+    container_name: adminer-db
     image: adminer
     restart: always
     ports:
