@@ -9,7 +9,7 @@ services:
   www:
     build:
       context: ./php
-      dockerfile: C:\Users\scrs_zdenek\nette\Dockerfile
+      dockerfile: Dockerfile
     container_name: php73
     depends_on:
       - db
