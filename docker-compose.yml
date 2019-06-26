@@ -9,7 +9,7 @@ services:
   www:
     build:
       context: ./php
-      dockerfile: Dockerfile # on windows use full path to Dockerfile
+      dockerfile: Dockerfile # enter the file path
     container_name: php73
     depends_on:
       - db
