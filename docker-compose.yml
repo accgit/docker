@@ -32,7 +32,6 @@ services:
     ports:
       - 6033:3306
 
-
   # service for database management
   adminer:
     image: adminer
