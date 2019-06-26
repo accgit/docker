@@ -1,0 +1,48 @@
+
+#docker version
+version: '3.7'
+
+# docker service
+services:
+
+  # service for website
+  www:
+    build:
+      context: ./php
+      dockerfile: C:\Users\scrs_zdenek\nette\Dockerfile
+    container_name: php73
+    depends_on:
+      - db
+    volumes:
+      - ./php:/var/www/html/
+    ports:
+      - 8000:80
+
+  # service for database mysqli
+  db:
+    container_name: mysql8
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: webapp
+      MYSQL_USER: accgit
+      MYSQL_PASSWORD: root
+    ports:
+      - 6033:3306
+
+
+  # service for database management
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+  # service for install app
+  composer:
+    image: composer
+    command: create-project nette/sandbox /var/www/html/sandbox
+    volumes:
+      - ./php:/var/www/html/
