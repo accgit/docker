@@ -26,9 +26,9 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: webapp
-      MYSQL_USER: accgit
-      MYSQL_PASSWORD: root
+      MYSQL_DATABASE: nette
+      MYSQL_USER: nette
+      MYSQL_PASSWORD: nette
     ports:
       - 6033:3306
 
