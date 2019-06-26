@@ -1,6 +1,6 @@
 ## Docker for Nette sandbox
 
-Setting up and running the nette sandbox server on the docker.
+Setting up and running Nette sandbox on docker.
 
 ## Command
 
