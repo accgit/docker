@@ -20,6 +20,7 @@ http://localhost:8080 Adminer
 
 ```
 root password: root
-user: accgit
-password: root
+user: nette
+password: nette
+database: nette
 ```
