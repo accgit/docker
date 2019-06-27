@@ -36,7 +36,6 @@ services:
   adminer:
     container_name: adminer-db
     image: adminer
-    restart: always
     links:
       - db
     depends_on:
