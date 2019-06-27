@@ -7,10 +7,10 @@ services:
 
   # service for php and apache
   php:
-    build:
-      context: ./php
-      dockerfile: Dockerfile # enter the file path
+    build: .
     container_name: php73-apache
+    links:
+      - db
     depends_on:
       - db
     volumes:
@@ -37,12 +37,9 @@ services:
     container_name: adminer-db
     image: adminer
     restart: always
+    links:
+      - db
+    depends_on:
+      - db
     ports:
       - 8080:8080
-
-  # service for install app
-  composer:
-    image: composer
-    command: create-project nette/sandbox /var/www/html/sandbox
-    volumes:
-      - ./php:/var/www/html/
