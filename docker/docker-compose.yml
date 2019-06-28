@@ -1,0 +1,44 @@
+
+# docker version
+version: '3.7'
+
+# docker service
+services:
+
+
+  # service php and apache
+  php:
+    build: php
+    volumes:
+      - ../:/var/www/html/
+    ports:
+      - 8000:80
+
+
+  # service database mysqli
+  db:
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8 --collation-server=utf8_unicode_ci
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: nette
+      MYSQL_USER: nette
+      MYSQL_PASSWORD: nette
+    ports:
+      - 6033:3306
+
+
+  # service database management
+  adminer:
+    image: adminer
+    ports:
+      - 8080:8080
+
+
+  # service composer
+  composer:
+    image: composer
+    command: create-project nette/sandbox /var/www/html/sandbox
+    volumes:
+      - ../:/var/www/html
