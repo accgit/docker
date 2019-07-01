@@ -1,4 +1,3 @@
-
 # image from docker hub
 FROM php:7.3-apache
 
