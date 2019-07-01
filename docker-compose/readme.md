@@ -1,7 +1,7 @@
 ## Docker Compose
 
 ```
-docker-compose up --buill
+docker-compose up --build
 ```
 
 ## Documentation
