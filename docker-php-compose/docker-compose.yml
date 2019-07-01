@@ -7,7 +7,7 @@ services:
 
   # service php and apache
   php:
-    build: php
+    build: docker/php
     container_name: php73
     volumes:
       - ./:/var/www/html/
