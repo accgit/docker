@@ -2,5 +2,5 @@
 
 Setting docker for php server.
 
-- [Docker Compose PHP server](https://github.com/accgit/docker-php/tree/master/docker-compose)
+- [Docker Compose PHP server](https://github.com/accgit/docker/tree/master/docker-php-compose)
 
