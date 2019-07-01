@@ -9,5 +9,5 @@ docker build -t sandbox .
 Run app.
 
 ```
-docker -p 8000:80 sandbox
+docker run -p 8000:80 sandbox
 ```
