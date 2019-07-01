@@ -1,4 +1,4 @@
-## Docker Compose
+## Docker PHP Compose
 
 ```
 docker-compose up --build
