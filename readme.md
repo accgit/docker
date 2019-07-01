@@ -1,3 +1,3 @@
 ## Docker PHP
 
-Setting docker for php.
+Setting docker for php server.
