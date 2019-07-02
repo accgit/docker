@@ -7,7 +7,6 @@ RUN echo "<?php echo phpinfo(); ?>" > /var/www/html/index.php
 
 # copy files and directory
 COPY sandbox/ /var/www/html/sandbox
-COPY index.php /var/www/html
 
 # permission settings
 RUN \

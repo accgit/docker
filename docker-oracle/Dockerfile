@@ -22,7 +22,7 @@ RUN rm -rf /tmp/oracle-instantclient12.2-*.deb
 ENV LD_LIBRARY_PATH /usr/lib/oracle/12.2/client64/lib/
 ENV ORACLE_HOME /usr/lib/oracle/12.2/client64/lib/
 
-# configure oracle for php
+# configure client for php
 RUN echo 'instantclient,/usr/lib/oracle/12.2/client64/lib' | pecl install oci8 && docker-php-ext-enable oci8
 
 # copy files and directory
