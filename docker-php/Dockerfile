@@ -6,7 +6,8 @@ RUN \
 	apt-get update && apt-get upgrade -y && docker-php-ext-install mysqli && \
 	a2enmod rewrite && service apache2 restart
 
-# copy app
+# copy files and directory
+COPY index.php /var/www/html
 COPY sandbox/ /var/www/html/sandbox
 
 # permission settings
