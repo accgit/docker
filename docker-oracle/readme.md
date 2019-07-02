@@ -1,1 +1,3 @@
-## Docker PHP and Oracle Client 12.2
+## Docker PHP with Oracle client
+
+Oracle client 12.2
