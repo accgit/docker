@@ -17,5 +17,11 @@ password: webapp
 database: webapp
 ```
 
+## Support mysql for php
+
+```
+docker-php-ext-install mysqli
+```
+
 ## Documentation
 https://docs.docker.com/compose/
