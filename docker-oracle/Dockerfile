@@ -23,7 +23,7 @@ ENV LD_LIBRARY_PATH /usr/lib/oracle/12.2/client64/lib/
 ENV ORACLE_HOME /usr/lib/oracle/12.2/client64/lib/
 
 # configure client for php
-RUN echo 'instantclient,/usr/lib/oracle/12.2/client64/lib' | pecl install oci8 && docker-php-ext-enable oci8
+RUN echo 'instantclient,/usr/lib/oracle/12.2/client64/lib' | pecl install oci8-2.2.0 && docker-php-ext-enable oci8
 
 # copy files and directory
 COPY sandbox/ /var/www/html/sandbox
