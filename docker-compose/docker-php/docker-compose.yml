@@ -5,10 +5,11 @@ version: '3.7'
 services:
 
 
-  # service php and apache
+  # php server
   php:
-    build: docker/php
-    container_name: php73
+    build: .
+    container_name: php
+    restart: always
     volumes:
       - ./:/var/www/html/
     ports:

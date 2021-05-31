@@ -1,7 +1,13 @@
-version: "3.7"
+# docker version
+version: '3.7'
+
+# docker service
 services:
+
+
+  # generate certificate for server
   generate:
     build: .
-    container_name: accgit
+    container_name: generate-cert
     volumes:
     - ./cert/:/certs/

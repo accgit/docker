@@ -1,12 +1,14 @@
 ## Docker PHP
 
-Build app.
+Minimal configuration of the php server in the docker.
+
+Docker build:
 
 ```
 docker build -t sandbox .
 ```
 
-Run app.
+Docker run:
 
 ```
 docker run -p 8000:80 sandbox

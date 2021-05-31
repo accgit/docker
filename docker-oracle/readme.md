@@ -1,3 +1,15 @@
 ## Docker PHP with Oracle client
 
-Oracle client 12.2
+Configuring php with oracle client 12.2.
+
+Docker build:
+
+```
+docker build -t sandbox .
+```
+
+Docker run:
+
+```
+docker run -p 8000:80 sandbox
+```
