@@ -22,6 +22,11 @@ COPY php.ini/ /etc/php/8.0/apache2/php.ini/
 
 # Docker generate certificate for server
 
+Add configure ssl for apache
+```
+RUN a2enmod ssl
+```
+
 The ports in Dockerfile:
 ```
 EXPOSE 80 443
