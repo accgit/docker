@@ -1,0 +1,14 @@
+[req]
+default_bits = 2048
+prompt = no
+default_md = sha256
+distinguished_name = dn
+
+[dn]
+C = CZ
+ST = Random
+L = Random
+O = Random
+OU = Random
+emailAddress = example@example.com
+CN = localhost

@@ -1,0 +1,7 @@
+version: "3.7"
+services:
+  generate:
+    build: .
+    container_name: accgit
+    volumes:
+    - ./cert/:/certs/
