@@ -12,6 +12,3 @@ Docker run:
 ```
 docker-compose up
 ```
-
-## Documentation
-https://docs.docker.com/compose/

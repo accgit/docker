@@ -1,28 +1,27 @@
 ## Docker MySQL Compose
 
+Php configuration via docker-compose.
+
+Docker build:
 ```
 docker-compose up --build
 ```
 
-## Database manager
+Docker run:
+
+```
+docker-compose up
+```
+
+Database manager:
 
 http://localhost:8080
 
-## Database login
+Database login:
 
 ```
 root password: root
-user: webapp
-password: webapp
-database: webapp
+user: super
+password: pass
+database: app
 ```
-
-## Support mysql for php
-
-```
-docker-php-ext-install mysqli
-docker-php-ext-enable mysqli
-```
-
-## Documentation
-https://docs.docker.com/compose/
