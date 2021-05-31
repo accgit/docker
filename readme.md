@@ -39,5 +39,5 @@ php:
 Apache configuration ssl:
 
 ```
-COPY 000-default.conf /etc/apache2/sites-available/
+COPY 000-default.conf/ /etc/apache2/sites-available/
 ```
