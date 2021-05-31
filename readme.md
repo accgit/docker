@@ -22,8 +22,6 @@ COPY php.ini/ /etc/php/8.0/apache2/php.ini/
 
 # Docker generate certificate for server
 
-Use docker-server-certificate
-
 The ports in Dockerfile:
 ```
 EXPOSE 80 443
