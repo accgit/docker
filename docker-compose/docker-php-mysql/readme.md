@@ -15,7 +15,9 @@ docker-compose up
 
 Database manager:
 
+```
 http://localhost:8080
+```
 
 Database login:
 
