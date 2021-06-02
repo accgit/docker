@@ -10,9 +10,9 @@ RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 RUN echo "<?php echo phpinfo(); ?>" > /var/www/html/info.php
 
 # copy files to tmp
-COPY oracle/oracle-instantclient12.2-basic_12.2.0.1.0-2_amd64.deb/ /tmp
-COPY oracle/oracle-instantclient12.2-devel_12.2.0.1.0-2_amd64.deb/ /tmp
-COPY oracle/oracle-instantclient12.2-sqlplus_12.2.0.1.0-2_amd64.deb/ /tmp
+ADD oracle/oracle-instantclient12.2-basic_12.2.0.1.0-2_amd64.deb/ /tmp
+ADD oracle/oracle-instantclient12.2-devel_12.2.0.1.0-2_amd64.deb/ /tmp
+ADD oracle/oracle-instantclient12.2-sqlplus_12.2.0.1.0-2_amd64.deb/ /tmp
 
 # install oracle client
 RUN dpkg -i /tmp/oracle-instantclient12.2-basic_12.2.0.1.0-2_amd64.deb
