@@ -8,6 +8,14 @@ RUN docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu/
 RUN docker-php-ext-install ldap
 ```
 
+## Docker intl for PHP
+```
+RUN apt -y update \
+&& apt install -y libicu-dev \
+&& docker-php-ext-configure intl \
+&& docker-php-ext-install intl
+```
+
 ## Docker gd for PHP
 ```
 RUN apt install libfreetype6-dev libjpeg62-turbo-dev libpng-dev -y
