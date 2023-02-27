@@ -35,6 +35,11 @@ Add configure ssl for apache
 RUN a2enmod ssl
 ```
 
+# Docker copy certificate to container
+```
+COPY cert/* /etc/apache2/ssl/
+```
+
 The ports in Dockerfile:
 ```
 EXPOSE 80 443
