@@ -33,6 +33,7 @@ COPY conf/php.ini /usr/local/etc/php/conf.d
 Add configure ssl for apache
 ```
 RUN a2enmod ssl
+RUN apt install -y ca-certificates
 ```
 
 # Docker copy certificate to container
